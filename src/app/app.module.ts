@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { ComissoesModule } from './comissoes/comissoes.module';
+import { ProdutoModule } from './produto/produto.module';
+import { VendedorModule } from './vendedor/vendedor.module';
+import { VendaModule } from './venda/venda.module';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { ComissoesModule } from './comissoes/comissoes.module';
     AppRoutingModule,
     BrowserModule,
     ComissoesModule,
+    ProdutoModule,
+    VendedorModule,
+    VendaModule,
     RouterModule
   ],
   providers: [],
@@ -21,4 +27,6 @@ import { ComissoesModule } from './comissoes/comissoes.module';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

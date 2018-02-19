@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComissoesComponent } from './comissoes/comissoes.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { VendedorComponent } from './vendedor/vendedor.component';
+import { VendaComponent } from './venda/venda.component';
 
 const appRoutes: Routes = [
     {
@@ -11,6 +14,18 @@ const appRoutes: Routes = [
     {
         path: 'comissoes',
         component: ComissoesComponent
+    },
+    {
+        path: 'produto',
+        component: ProdutoComponent
+    },
+    {
+        path: 'vendedor',
+        component: VendedorComponent
+    },
+    {
+        path: 'venda',
+        component: VendaComponent
     }
 ];
 
@@ -22,4 +37,6 @@ const appRoutes: Routes = [
         RouterModule
     ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+    
+}

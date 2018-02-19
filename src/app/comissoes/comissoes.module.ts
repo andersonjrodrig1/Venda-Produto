@@ -12,4 +12,6 @@ import { RouterModule, Routes } from '@angular/router';
     exports: [],
     providers: []
 })
-export class ComissoesModule { }
+export class ComissoesModule {
+    
+ }
