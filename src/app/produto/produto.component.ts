@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'produto',
-    template: 'produto.component.html'
+  moduleId: module.id,
+  selector: 'produto',
+  templateUrl: 'produto.component.html'
 })
 export class ProdutoComponent { }

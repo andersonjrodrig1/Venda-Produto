@@ -7,11 +7,12 @@ import { ComissoesModule } from './comissoes/comissoes.module';
 import { ProdutoModule } from './produto/produto.module';
 import { VendedorModule } from './vendedor/vendedor.module';
 import { VendaModule } from './venda/venda.module';
+import { MenuComponent } from './menu/menu.compoent';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
