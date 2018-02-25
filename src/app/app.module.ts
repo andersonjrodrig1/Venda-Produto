@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
-import { ComissoesModule } from './comissoes/comissoes.module';
+import { ComissaoModule } from './comissao/comissao.module';
 import { ProdutoModule } from './produto/produto.module';
 import { VendedorModule } from './vendedor/vendedor.module';
 import { VendaModule } from './venda/venda.module';
@@ -17,7 +17,7 @@ import { MenuComponent } from './menu/menu.compoent';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    ComissoesModule,
+    ComissaoModule,
     ProdutoModule,
     VendedorModule,
     VendaModule,
@@ -28,6 +28,4 @@ import { MenuComponent } from './menu/menu.compoent';
     AppComponent
   ]
 })
-export class AppModule { 
-
-}
+export class AppModule { }

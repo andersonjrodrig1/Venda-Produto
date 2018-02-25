@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ComissoesComponent } from './comissoes/comissoes.component';
+import { ComissaoComponent } from './comissao/comissao.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { VendaComponent } from './venda/venda.component';
@@ -13,7 +13,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'comissoes',
-        component: ComissoesComponent
+        component: ComissaoComponent
     },
     {
         path: 'produto',

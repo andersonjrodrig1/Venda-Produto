@@ -1,0 +1,26 @@
+<menu-navbar></menu-navbar>
+<br class="clearfix" />
+<div class="container">
+  <div>
+    <h3>Relatório de Comissões e Vendas</h3>
+  </div>    
+  <div>
+    <h4>Comissões</h4>
+    <table class="table table-table table-striped">
+        <thead>
+          <tr>
+            <th>Vendedor</th>
+            <th>Total Venda</th>
+            <th>Total Comissão</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of comissoes">
+          <td>{{ c.vendedor.nmVendedor }}</td>
+          <td>{{ c.vrTotalVenda }}</td>
+          <td>{{ c.vrComissao }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
