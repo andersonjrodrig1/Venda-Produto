@@ -1,5 +1,5 @@
-import { Vendedor } from './../entity/vendedor';
-import { Comissao } from './../entity/comissao';
+import { Vendedor } from './../model/vendedor.model';
+import { Comissao } from './../model/comissao.model';
 
 export const COMISSAO: Comissao[] = [
   {
