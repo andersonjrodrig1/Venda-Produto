@@ -1,5 +1,5 @@
-import { Vendedor } from './../model/vendedor.model';
-import { Comissao } from './../model/comissao.model';
+import { Vendedor } from './../models/vendedor.model';
+import { Comissao } from './../models/comissao.model';
 
 export const COMISSAO: Comissao[] = [
   {

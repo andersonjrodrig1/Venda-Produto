@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { COMISSAO } from './../mock/comissao-mock';
-import { Comissao } from '../entity/comissao';
+import { Comissao } from './../models/comissao.model';
 
 @Injectable()
 export class ComissaoService { 

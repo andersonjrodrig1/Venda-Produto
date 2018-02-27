@@ -1,4 +1,4 @@
-import { Vendedor } from './vendedor';
+import { Vendedor } from './vendedor.model';
 
 export class Comissao {
     public vendedor: Vendedor;

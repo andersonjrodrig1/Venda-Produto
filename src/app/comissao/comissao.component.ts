@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Comissao } from '../resources/model/comissao.model';
+import { Comissao } from '../resources/models/comissao.model';
 import { ComissaoService } from '../resources/service/comissao.service';
 
 @Component({
