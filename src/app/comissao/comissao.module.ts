@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ComissaoComponent } from './comissao.component';
 import { ComissaoService } from '../resources/service/comissao.service';
-import { MenuModule } from '../menu/menu.module';
+import { MenuModule } from '../resources/menu/menu.module';
+import { FooterModule } from '../resources/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MenuModule } from '../menu/menu.module';
   imports: [
     CommonModule,
     MenuModule,
+    FooterModule,
     RouterModule
   ],
   exports: [],

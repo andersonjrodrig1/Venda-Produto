@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VendedorComponent } from './vendedor.component';
-import { MenuComponent } from '../menu/menu.compoent';
-import { MenuModule } from '../menu/menu.module';
+import { MenuComponent } from '../resources/menu/menu.compoent';
+import { MenuModule } from '../resources/menu/menu.module';
 
 @NgModule({
   declarations: [

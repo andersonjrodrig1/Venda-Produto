@@ -1,4 +1,6 @@
-<menu-navbar></menu-navbar>
+<div>
+  <menu-navbar></menu-navbar>
+</div>
 <br class="clearfix" />
 <div class="container">
   <div>
@@ -15,10 +17,10 @@
           </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let c of comissoes">
-          <td>{{ c.vendedor.nmVendedor }}</td>
-          <td>{{ c.vrTotalVenda }}</td>
-          <td>{{ c.vrComissao }}</td>
+        <tr *ngFor="let comissao of comissoes">
+          <td>{{ comissao.vendedor.nmVendedor }}</td>
+          <td>{{ comissao.vrTotalVenda }}</td>
+          <td>{{ comissao.vrComissao }}</td>
         </tr>
       </tbody>
     </table>
@@ -26,17 +28,25 @@
   <div>
     <h4>Vendas Realizadas</h4>
     <table class="table table-table table-striped">
-      <tr>
-        <th>Vendedor</th>
-        <th>Produto</th>
-        <th>Quantidade</th>
-        <th>Data Venda</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Vendedor</th>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Data Venda</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let venda of vendasRealizadas">
+          <td>{{ venda.vendedor.nmVendedor }}</td>
+          <td>{{ venda.produto.nmProduto }}</td>
+          <td>{{ venda.qtdProduto }}</td>
+          <td>{{ venda.dtVenda }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
+</div>
+<div>
+ 
 </div>
