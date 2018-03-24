@@ -11,20 +11,24 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Código</th>
             <th>Nome Produto</th>
             <th>Valor Produto</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let produto of produtos">
+            <td>{{ produto.cdProduto }}</td>
+            <td>{{ produto.nmProduto }}</td>
+            <td>{{ produto.vrProduto }}</td>
+            <td>
+              <input class="btn btn-primary" type="button" value="Atualizar" /> 
+              <input class="btn btn-danger" type="button" value="Excluir" /> 
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
-

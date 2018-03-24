@@ -17,7 +17,7 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdVenda: 2,
     cdProduto: 1,
     cdVendedor: 1,
-    qtdProduto: 3,
+    qtdProduto: 1,
     dtVenda: "2018-03-03"
   },
   {
@@ -34,14 +34,14 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdVenda: 4,
     cdProduto: 1,
     cdVendedor: 2,
-    qtdProduto: 6,
+    qtdProduto: 1,
     dtVenda: "2018-03-03"
   },
   {
     produto: {
-      cdProduto: 1,
-      nmProduto: "Camisa Regata",
-      vrProduto: 29.99
+      cdProduto: 2,
+      nmProduto: "Calça Jeans",
+      vrProduto: 100
     },
     vendedor: {
       cdVendedor: 1,
@@ -49,16 +49,16 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
       nrTelefone: "34 99977-0909"
     },
     cdVenda: 2,
-    cdProduto: 1,
+    cdProduto: 2,
     cdVendedor: 1,
-    qtdProduto: 3,
+    qtdProduto: 1,
     dtVenda: "2018-03-03"
   },
   {
     produto: {
-      cdProduto: 1,
-      nmProduto: "Camisa Regata",
-      vrProduto: 29.99
+      cdProduto: 2,
+      nmProduto: "Calça Jeans",
+      vrProduto: 100
     },
     vendedor: {
       cdVendedor: 2,
@@ -66,9 +66,9 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
       nrTelefone: "34 99232-3232"
     },
     cdVenda: 4,
-    cdProduto: 1,
+    cdProduto: 2,
     cdVendedor: 2,
-    qtdProduto: 6,
+    qtdProduto: 1,
     dtVenda: "2018-03-03"
   }
 ];
