@@ -1,6 +1,6 @@
 import { Vendedor } from './../models/vendedor.model';
 
-export const VENDEDOR: Vendedor[] = [
+export const VENDEDORES: Vendedor[] = [
   {
     cdVendedor: 1,
     nmVendedor: 'José',

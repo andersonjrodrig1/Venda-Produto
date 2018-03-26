@@ -1,1 +1,28 @@
 <menu-navbar></menu-navbar>
+<div class="container">
+  <br class="clearfix" />
+  <h3>Lista de Produtos</h3>
+  <div>
+    <table class="table table-table table-striped">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Contato</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vendedor of vendedores">
+          <td>{{ vendedor.cdVendedor }}</td>
+          <td>{{ vendedor.nmVendedor }}</td>
+          <td>{{ vendedor.nrTelefone }}</td>
+          <td>
+            <input class="btn btn-primary" type="button" value="Atualizar" />
+            <input class="btn btn-danger" type="button" value="Excluir" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

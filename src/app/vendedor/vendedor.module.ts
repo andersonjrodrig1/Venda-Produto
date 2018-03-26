@@ -3,17 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { VendedorComponent } from './vendedor.component';
 import { MenuComponent } from '../resources/menu/menu.compoent';
 import { MenuModule } from '../resources/menu/menu.module';
+import { VendedorService } from '../resources/service/vendedor.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     VendedorComponent
   ],
   imports: [
-    RouterModule,
-    MenuModule
+    CommonModule,
+    MenuModule,
+    RouterModule
   ],
   exports: [],
-  providers: []
+  providers: [
+    VendedorService
+  ]
 })
 export class VendedorModule {
 
