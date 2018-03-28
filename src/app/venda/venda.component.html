@@ -1,1 +1,39 @@
 <menu-navbar></menu-navbar>
+<br class="clearfix" />
+<div class="container">
+  <div class="row">
+    <h3>Registrar venda de Produto</h3>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="vendedor">Vendedor</label>
+      <select name="vendedor" id="vendedor" class="form-control">
+        <option value="null" disabled>Vendedor</option>
+      </select>
+    </div>
+    <div class="col-sm-4">
+      <label for="produto">Produto</label>
+      <select name="produto" id="produto" class="form-control">
+        <option value="null" disabled>Produto</option>
+      </select>
+    </div>
+  </div>
+  <br class="clearfix" />
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="quantidade">Quantidade</label>
+      <input class="form-control" name="quantidade" id="quantidade" type="text" placeholder="Informe quantidade" />
+    </div>
+    <div class="col-sm-3">
+      <label for="dataVenda">Data da Venda</label>
+      <input class="form-control" name="dataVenda" id="dataVenda" type="text" />
+    </div>
+  </div>
+  <br class="clearfix" />
+  <div class="row">
+    <div class="col-sm-12" style="text-align:left;">
+      <input class="btn btn-primary" type="button" name="adicionar" id="adicionar" value="Adicionar" />
+      <input class="btn btn-warning" type="button" name="limpar" id="limpar" value="Limpar" />
+    </div>
+  </div>
+</div>

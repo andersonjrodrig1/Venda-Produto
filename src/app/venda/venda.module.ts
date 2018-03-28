@@ -3,14 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { VendaComponent } from './venda.component';
 import { MenuComponent } from '../resources/menu/menu.compoent';
 import { MenuModule } from '../resources/menu/menu.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     VendaComponent
   ],
   imports: [
-    RouterModule,
-    MenuModule
+    CommonModule,
+    MenuModule,
+    RouterModule
   ],
   exports: [],
   providers: []
