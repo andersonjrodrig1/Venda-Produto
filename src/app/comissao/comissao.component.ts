@@ -18,14 +18,9 @@ export class ComissaoComponent implements OnInit {
   
   ngOnInit(): void {
     this.buscarComissoes();
-    this.buscarVendasRealizadas();
   }
 
   buscarComissoes(): void {
     this.comissoes = this._service.getComissoesMock();
-  }
-
-  buscarVendasRealizadas(): void {
-    this.vendasRealizadas = this._service.getVendaRealizadaMock();
   }
 }

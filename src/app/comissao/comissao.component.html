@@ -23,25 +23,4 @@
       </tbody>
     </table>
   </div>
-  <div>
-    <h4>Vendas Realizadas</h4>
-    <table class="table table-table table-striped">
-      <thead>
-        <tr>
-          <th>Vendedor</th>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Data Venda</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let venda of vendasRealizadas">
-          <td>{{ venda.vendedor.nmVendedor }}</td>
-          <td>{{ venda.produto.nmProduto }}</td>
-          <td>{{ venda.qtdProduto }}</td>
-          <td>{{ venda.dtVenda }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
