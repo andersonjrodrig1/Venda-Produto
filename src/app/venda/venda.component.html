@@ -4,36 +4,95 @@
   <div class="row">
     <h3>Registrar venda de Produto</h3>
   </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <label for="vendedor">Vendedor</label>
-      <select name="vendedor" id="vendedor" class="form-control">
-        <option value="null" disabled>Vendedor</option>
-      </select>
+  <form #formVenda="ngForm" novalidate>
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="vendedor">Vendedor</label>
+        <select name="vendedor" id="vendedor" [(ngModel)]="vendedorSelecionado" 
+          class="form-control" 
+          placeholder="Produto" 
+          required>
+          <option *ngFor="let vendedor of vendedores"
+            [selected]="vendedor == vendedorSelecionado"
+            [ngValue]="vendedor">{{ vendedor.nmVendedor }}</option>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <label for="produto">Produto</label>
+        <select name="produto" id="produto" [(ngModel)]="produtoSelecionado" 
+          class="form-control" 
+          placeholder="Vendedor" 
+          required>
+          <option *ngFor="let produto of produtos"
+            [selected]="produto == produtoSelecionado"
+            [ngValue]="produto">{{ produto.nmProduto }}</option>
+        </select>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <label for="produto">Produto</label>
-      <select name="produto" id="produto" class="form-control">
-        <option value="null" disabled>Produto</option>
-      </select>
+    <br class="clearfix" />
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="quantidade">Quantidade</label>
+        <input class="form-control" id="quantidade" 
+          name="quantidade" 
+          type="text" 
+          (keyup)="keyup($event.target)"
+          [(ngModel)]="quantidade"
+          placeholder="Informe quantidade" 
+          required />
+      </div>
+      <div class="col-sm-4">
+        <div class="input-append date" data-date-format="dd-mm-yyyy">
+          <label for="dataVenda">Data da Venda</label>
+          <input class="form-control span2" id="dataVenda"
+          name="dataVenda" 
+          [(ngModel)]="dataVenda" 
+          size="16" 
+          type="date" 
+          required />
+        </div>
+      </div>
+      <div class="col-sm-4" style="text-align:left;">
+        <input class="btn btn-primary" type="button" 
+          [disabled]="!formVenda.valid"
+          (click)="resevarVenda()"
+          [ngStyle]="{'top':'33px','position':'relative'}"
+          name="adicionar" 
+          id="adicionar" 
+          value="Adicionar" />
+      </div>
     </div>
-  </div>
+  </form>
   <br class="clearfix" />
-  <div class="row">
-    <div class="col-sm-4">
-      <label for="quantidade">Quantidade</label>
-      <input class="form-control" name="quantidade" id="quantidade" type="text" placeholder="Informe quantidade" />
-    </div>
-    <div class="col-sm-3">
-      <label for="dataVenda">Data da Venda</label>
-      <input class="form-control" name="dataVenda" id="dataVenda" type="text" />
-    </div>
-  </div>
-  <br class="clearfix" />
-  <div class="row">
-    <div class="col-sm-12" style="text-align:left;">
-      <input class="btn btn-primary" type="button" name="adicionar" id="adicionar" value="Adicionar" />
-      <input class="btn btn-warning" type="button" name="limpar" id="limpar" value="Limpar" />
+  <div *ngIf="vendas != null && vendas.length > 0">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Produtos resevados para venda</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Vendedor</th>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Valor</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let venda of vendas">
+              <td>{{ venda.vendedor.nmVendedor }}</td>
+              <td>{{ venda.produto.nmProduto }}</td>
+              <td>{{ venda.qtdProduto }}</td>
+              <td>R$ {{ venda.produto.vrProduto }}</td>
+              <td>R$ {{ venda.ttlVenda }}</td>
+              <td>
+                <input class="btn btn-danger" type="button" value="Excluir" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

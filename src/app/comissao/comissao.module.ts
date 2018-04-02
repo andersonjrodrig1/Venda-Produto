@@ -13,7 +13,6 @@ import { FooterModule } from '../resources/footer/footer.module';
   imports: [
     CommonModule,
     MenuModule,
-    FooterModule,
     RouterModule
   ],
   exports: [],

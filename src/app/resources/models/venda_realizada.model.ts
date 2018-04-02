@@ -8,5 +8,6 @@ export class VendaRealizada {
     public cdProduto: number;
     public cdVendedor: number;
     public qtdProduto: number;
-    public dtVenda: string;   
+    public dtVenda: string;
+    public ttlVenda: number; 
 }
