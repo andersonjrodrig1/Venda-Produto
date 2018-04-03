@@ -87,7 +87,7 @@
               <td>R$ {{ venda.produto.vrProduto }}</td>
               <td>R$ {{ venda.ttlVenda }}</td>
               <td>
-                <input class="btn btn-danger" type="button" value="Excluir" />
+                <input class="btn btn-danger" type="button" value="Remover" (click)="removerReserva(venda)" />
               </td>
             </tr>
           </tbody>

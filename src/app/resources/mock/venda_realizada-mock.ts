@@ -18,7 +18,8 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdProduto: 1,
     cdVendedor: 1,
     qtdProduto: 1,
-    dtVenda: "2018-03-03"
+    dtVenda: "2018-03-03",
+    ttlVenda: 29.99
   },
   {
     produto: {
@@ -35,7 +36,8 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdProduto: 1,
     cdVendedor: 2,
     qtdProduto: 1,
-    dtVenda: "2018-03-03"
+    dtVenda: "2018-03-03",
+    ttlVenda: 29.99
   },
   {
     produto: {
@@ -52,7 +54,8 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdProduto: 2,
     cdVendedor: 1,
     qtdProduto: 1,
-    dtVenda: "2018-03-03"
+    dtVenda: "2018-03-03",
+    ttlVenda: 100
   },
   {
     produto: {
@@ -69,6 +72,7 @@ export const VENDA_REALIZADA: VendaRealizada[] = [
     cdProduto: 2,
     cdVendedor: 2,
     qtdProduto: 1,
-    dtVenda: "2018-03-03"
+    dtVenda: "2018-03-03",
+    ttlVenda: 100
   }
 ];

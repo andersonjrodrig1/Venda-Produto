@@ -39,7 +39,7 @@ export class VendaComponent implements OnInit {
     this.produtos = this._produtoService.getProdutosMock();
   }
 
-  resevarVenda() {
+  resevarVenda(): void {
     this.venda = new VendaRealizada();
     this.venda.produto = new Produto();
     this.venda.vendedor = new Vendedor();
@@ -53,14 +53,18 @@ export class VendaComponent implements OnInit {
     this.resetFields();
   }
 
-  resetFields() {
+  removerReserva(obj: any): void {
+    this.vendas = this.vendas.filter(v => v != obj);
+  }
+
+  resetFields(): void {
     this.produtoSelecionado = undefined;
     this.vendedorSelecionado = undefined;
     this.dataVenda = undefined;
     this.quantidade = undefined;
   }
 
-  keyup($event) {
+  keyup($event): void {
     var regex = /[^0-9.]/;
     regex.lastIndex = 0;
     var campo = $event;
