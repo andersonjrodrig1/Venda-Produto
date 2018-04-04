@@ -5,9 +5,9 @@ import { Vendedor } from './../models/vendedor.model';
 @Injectable()
 export class VendedorService {
 
-    constructor() { }
+  constructor() { }
 
-    getVendedoresMock(): Vendedor[] {
-        return VENDEDORES;
-    }
+  getVendedoresMock(): Vendedor[] {
+    return VENDEDORES;
+  }
 }

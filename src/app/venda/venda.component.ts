@@ -4,6 +4,7 @@ import { Vendedor } from '../resources/models/vendedor.model';
 import { Produto } from '../resources/models/produto.model';
 import { ProdutoService } from '../resources/service/produto.service';
 import { VendaRealizada } from '../resources/models/venda_realizada.model';
+import { VendaService } from '../resources/service/venda.service';
 
 @Component({
   moduleId: module.id,
@@ -23,7 +24,8 @@ export class VendaComponent implements OnInit {
 
   constructor(
     private _vendedorService: VendedorService,
-    private _produtoService: ProdutoService
+    private _produtoService: ProdutoService,
+    private _vendaService: VendaService
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +39,10 @@ export class VendaComponent implements OnInit {
 
   getProdutos(): void {
     this.produtos = this._produtoService.getProdutosMock();
+  }
+
+  efetivarVenda(): void {
+
   }
 
   resevarVenda(): void {

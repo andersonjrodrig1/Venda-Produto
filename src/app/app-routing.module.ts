@@ -4,6 +4,7 @@ import { ComissaoComponent } from './comissao/comissao.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { VendaComponent } from './venda/venda.component';
+import { VendaRealizadaComponent } from './venda-realizada/venda-realizada.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'venda',
     component: VendaComponent
+  },
+  {
+    path: 'venda-realizada',
+    component: VendaRealizadaComponent
   }
 ];
 

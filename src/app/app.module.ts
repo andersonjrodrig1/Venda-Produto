@@ -8,6 +8,7 @@ import { ProdutoModule } from './produto/produto.module';
 import { VendedorModule } from './vendedor/vendedor.module';
 import { VendaModule } from './venda/venda.module';
 import { MenuComponent } from './resources/menu/menu.compoent';
+import { VendaRealizadaModule } from './venda-realizada/venda-realizada.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MenuComponent } from './resources/menu/menu.compoent';
     ProdutoModule,
     VendedorModule,
     VendaModule,
+    VendaRealizadaModule,
     RouterModule
   ],
   providers: [],
