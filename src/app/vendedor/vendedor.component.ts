@@ -7,8 +7,7 @@ import { VendedorService } from '../resources/service/vendedor.service';
   selector: 'vendedor',
   templateUrl: 'vendedor.component.html'
 })
-export class VendedorComponent implements OnInit { 
-
+export class VendedorComponent implements OnInit {
   public vendedores: Vendedor[] = [];
 
   constructor(

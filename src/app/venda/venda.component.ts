@@ -12,7 +12,6 @@ import { VendaService } from '../resources/service/venda.service';
   templateUrl: 'venda.component.html'
 })
 export class VendaComponent implements OnInit {
-
   public vendas: VendaRealizada[] = [];
   public vendedores: Vendedor[] = [];
   public produtos: Produto[] = [];
@@ -41,7 +40,11 @@ export class VendaComponent implements OnInit {
     this.produtos = this._produtoService.getProdutosMock();
   }
 
-  efetivarVenda(): void {
+  efetivarVenda(obj: any): void {
+
+  }
+
+  efetivarTodas(obj: any): void {
 
   }
 
@@ -63,14 +66,14 @@ export class VendaComponent implements OnInit {
     this.vendas = this.vendas.filter(v => v != obj);
   }
 
-  resetFields(): void {
+  private resetFields(): void {
     this.produtoSelecionado = undefined;
     this.vendedorSelecionado = undefined;
     this.dataVenda = undefined;
     this.quantidade = undefined;
   }
 
-  keyup($event): void {
+  private keyup($event): void {
     var regex = /[^0-9.]/;
     regex.lastIndex = 0;
     var campo = $event;

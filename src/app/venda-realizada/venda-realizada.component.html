@@ -1,1 +1,25 @@
 <menu-navbar></menu-navbar>
+<div class="container">
+	<br class="clearfix" />
+	<h3>Relatório de Vendas Realizadas</h3>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Vendedor</th>
+				<th>Produto</th>
+				<th>Valor Produto</th>
+				<th>Quantidade</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let venda of vendas">
+				<td>{{ venda.vendedor.nmVendedor }}</td>
+				<td>{{ venda.produto.nmProduto }}</td>
+				<td>R$ {{ venda.produto.vrProduto }}</td>
+				<td>{{ venda.qtdProduto }}</td>
+				<td>R$ {{ venda.ttlVenda }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

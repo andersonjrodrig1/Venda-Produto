@@ -76,7 +76,9 @@
               <th>Quantidade</th>
               <th>Valor</th>
               <th>Total</th>
-              <th></th>
+              <th>
+                <input class="btn btn-primary" type="button" value="Efetivar Todas" (click)="efetivarTodas(vendas)" />
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -87,8 +89,8 @@
               <td>R$ {{ venda.produto.vrProduto }}</td>
               <td>R$ {{ venda.ttlVenda }}</td>
               <td>
+                <input class="btn btn-success" type="button" value="Efetivar" (click)="efetivarVenda(venda)" />
                 <input class="btn btn-danger" type="button" value="Remover" (click)="removerReserva(venda)" />
-                <input class="btn btn-success" type="button" value="Efetivar" (click)="efetivarVenda()" />
               </td>
             </tr>
           </tbody>

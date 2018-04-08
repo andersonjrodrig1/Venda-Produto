@@ -8,7 +8,6 @@ import { Produto } from '../resources/models/produto.model';
   templateUrl: 'produto.component.html'
 })
 export class ProdutoComponent implements OnInit {
-
   public produtos: Produto[] = []
 
   constructor(

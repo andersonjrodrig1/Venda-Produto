@@ -6,4 +6,8 @@ import { VendaRealizada } from './../models/venda_realizada.model';
 export class VendaService {
 
   constructor() { }
+
+  getVendasRealizadasMock() {
+    return VENDA_REALIZADA;
+  }
 }

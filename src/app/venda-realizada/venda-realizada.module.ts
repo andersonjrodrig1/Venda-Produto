@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from '../resources/menu/menu.module';
 import { RouterModule } from '@angular/router';
+import { VendaService } from '../resources/service/venda.service';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,7 @@ import { RouterModule } from '@angular/router';
     ],
     exports: [],
     providers: [
-        
+        VendaService
     ]
 })
 export class VendaRealizadaModule { }

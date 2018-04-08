@@ -5,9 +5,9 @@ import { PRODUTOS } from './../mock/produto-mock';
 @Injectable()
 export class ProdutoService {
 
-    constructor() { }
+	constructor() { }
 
-    getProdutosMock(): Produto[] {
-        return PRODUTOS;
-    }
+	getProdutosMock(): Produto[] {
+		return PRODUTOS;
+	}
 }
