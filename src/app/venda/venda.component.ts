@@ -44,7 +44,7 @@ export class VendaComponent implements OnInit {
 
   }
 
-  efetivarTodas(obj: any): void {
+  efetivarVendas(obj: any): void {
 
   }
 

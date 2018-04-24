@@ -19,6 +19,9 @@ export class VendaRealizadaComponent implements OnInit {
   }
 
   getVendasRealizadas() {
-    this.vendas = this._vendaRealizadaService.getVendasRealizadasMock();
+    this._vendaRealizadaService.getVendasRealizadas()
+      .subscribe(data => {
+        this.vendas = data.json();
+      });
   }
 }
