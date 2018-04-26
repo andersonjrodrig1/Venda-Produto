@@ -19,6 +19,9 @@ export class VendedorComponent implements OnInit {
   }
 
   getVendedores(): void {
-    this.vendedores = this._service.getVendedoresMock();
+    debugger;
+    this._service.getVendedores().subscribe(
+      data => this.vendedores = data.json()
+    );
   }
 }

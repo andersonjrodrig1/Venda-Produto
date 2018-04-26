@@ -19,6 +19,8 @@ export class ProdutoComponent implements OnInit {
   }
 
   getProdutos() {
-    this.produtos = this._service.getProdutosMock();
+    this._service.getProdutos().subscribe(
+      data => this.produtos = data.json()
+    );
   }
 }

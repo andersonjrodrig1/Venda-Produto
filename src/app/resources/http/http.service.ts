@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 
 @Injectable()
 export class HttpService {
@@ -16,9 +16,15 @@ export class HttpService {
 	}
 
 	get(url: string, param?: any) {
-		if (param){
+		if (param) {
 			url = `${url}/${param}`;
 		}
 		return this._http.get(url);
+	}
+
+	post(url: string, param?: any) {
+		var headers = this.getHeader();
+		var options = new RequestOptions({ headers: headers });
+		return this._http.post(url, param, options);
 	}
 }
