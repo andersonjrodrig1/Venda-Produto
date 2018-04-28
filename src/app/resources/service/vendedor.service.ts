@@ -12,7 +12,7 @@ export class VendedorService {
   ) { }
 
   getVendedores() {
-    let api = '/vendedores';
+    let api = '/vendedor';
     let url = environment.api + api;
 
     return this._http.get(url);

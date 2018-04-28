@@ -33,15 +33,29 @@ export class VendaComponent implements OnInit {
   }
 
   getVendedores(): void {
-    this.vendedores = this._vendedorService.getVendedoresMock();
+    this._vendedorService.getVendedores().subscribe(
+      data => this.vendedores = data.json()
+    );
   }
 
   getProdutos(): void {
-    this.produtos = this._produtoService.getProdutosMock();
+    this._produtoService.getProdutos().subscribe(
+      data => this.produtos = data.json()
+    );
   }
 
   efetivarVenda(obj: any): void {
-
+    debugger
+    if (obj) {
+      this._vendaService.setVenda(obj).subscribe(
+        data => {
+          this.getProdutos();
+          this.removerReserva(obj);
+        },
+        err => {
+          console.log('Error:', err);
+        });
+    }
   }
 
   efetivarVendas(obj: any): void {

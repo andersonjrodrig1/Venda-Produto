@@ -21,4 +21,11 @@ export class VendaService {
   getVendasRealizadasMock() {
     return VENDA_REALIZADA;
   }
+
+  setVenda(param?: any) {
+    let rota = '/venda_realizada';
+    let url = `${environment.api}${rota}`;
+
+    return this._httpService.post(url, param);
+  }
 }
