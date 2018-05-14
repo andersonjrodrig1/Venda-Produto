@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProdutoComponent } from './produto.component';
 import { MenuComponent } from '../resources/menu/menu.compoent';
 import { MenuModule } from '../resources/menu/menu.module';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { BrowserModule } from '@angular/platform-browser';
 import { ProdutoService } from '../resources/service/produto.service';
 
 @NgModule({
@@ -11,6 +13,8 @@ import { ProdutoService } from '../resources/service/produto.service';
     ProdutoComponent
   ],
   imports: [
+    BrowserModule,
+    BootstrapModalModule,
     CommonModule,
     MenuModule,
     RouterModule
