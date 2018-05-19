@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DialogInterfaceComponent } from './../dialog-interface/dialog-interface.component';
 import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 
 @Component({
@@ -7,6 +8,11 @@ import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
   templateUrl: './dialog-produto.component.html',
   styleUrls: ['./dialog-produto.component.css']
 })
-export class DialogProdutoComponent {
+export class DialogProdutoComponent extends DialogComponent<DialogInterfaceComponent, boolean> implements DialogInterfaceComponent {
+  title: string;
+  message: string;
 
+  constructor(dialogService: DialogService) {
+    super(dialogService);
+  }
 }
