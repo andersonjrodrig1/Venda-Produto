@@ -6,11 +6,11 @@ import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dial
 
 @Component({
   moduleId: module.id,
-  selector: 'produto',
+  selector: 'app-produto',
   templateUrl: 'produto.component.html'
 })
 export class ProdutoComponent implements OnInit {
-  public produtos: Produto[] = []
+  public produtos: Produto[] = [];
 
   constructor(
     private _service: ProdutoService,
@@ -29,11 +29,11 @@ export class ProdutoComponent implements OnInit {
 
   showDialogProduto() {
     const params = {
-      title: 'teste',
-      message: 'teste'
+      title: 'Cadastrar Produto',
+      name: 'Nome do Produto'
     };
 
-    let dialogo = this._dialogService.addDialog(DialogProdutoComponent, params).subscribe(
+    const dialogo = this._dialogService.addDialog(DialogProdutoComponent, params).subscribe(
       response => { }
     );
   }

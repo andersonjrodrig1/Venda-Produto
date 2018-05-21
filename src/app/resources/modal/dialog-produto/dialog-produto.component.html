@@ -1,15 +1,24 @@
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
   <div class="modal-content">
      <div class="modal-header">
+       <h4 class="modal-title">{{ title }}</h4>
        <button type="button" class="close" (click)="close()" >&times;</button>
-       <h4 class="modal-title">{{title || 'Confirm'}}</h4>
      </div>
      <div class="modal-body">
-       <p>{{message || 'Are you sure?'}}</p>
+       <div class="row">
+         <div class="col-8">
+          <span>{{ name }}</span>
+          <input name="produto" class="form-control" type="text" (ngModel)="produto.nmProduto" placeholder="nome produto">
+         </div>
+         <div class="col-4">
+          <span>{{ valor }}</span>
+          <input name="valor" class="form-control" type="text" (ngModel)="produto.vrProduto" placeholder="valor produto">
+         </div>
+       </div>
      </div>
      <div class="modal-footer">
-       <button type="button" class="btn btn-primary" (click)="confirm()">OK</button>
-       <button type="button" class="btn btn-default" (click)="close()" >Cancel</button>
+       <button type="button" class="btn btn-default" (click)="close()" >Cancelar</button>
+       <button type="button" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
      </div>
    </div>
 </div>
