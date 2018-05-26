@@ -28,7 +28,7 @@
           <tr *ngFor="let produto of produtos">
             <td>{{ produto.cdProduto }}</td>
             <td>{{ produto.nmProduto }}</td>
-            <td>{{ produto.vrProduto }}</td>
+            <td>{{ produto.vrProduto | currency:'BRL':true }}</td>
             <td>
               <input class="btn btn-primary" type="button" value="Atualizar" /> 
               <input class="btn btn-danger" type="button" value="Excluir" /> 

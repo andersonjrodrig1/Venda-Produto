@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http, Headers, RequestOptions, Jsonp } from '@angular/http';
 
 @Injectable()
 export class HttpService {
 	constructor(
-		private _http: Http
+		private http: Http
 	){ }
 
 	getHeader(): Headers {
 		var header = new Headers();
 		header.append('Content-Type', 'application/json');
-		header.append('Cache-Control', 'no-cache');
 
 		return header;
 	}
@@ -19,17 +18,16 @@ export class HttpService {
 		if (param) {
 			url = `${url}/${param}`;
 		}
-		return this._http.get(url);
+		return this.http.get(url);
 	}
 
-	post(url: string, param?: any) {
-		var headers = this.getHeader();
-    var options = new RequestOptions({ headers: headers });
-    
-    if (param) {
-      param = JSON.stringify(param);
-    }
-
-		return this._http.post(url, param, options);
+	post(url: string, body: any) {
+		var header = this.getHeader();
+		var headers = new RequestOptions({ headers: header });
+		return this.http.post(
+			url,
+			body,
+			headers
+		);
 	}
 }

@@ -8,17 +8,20 @@ import { HttpService } from '../http/http.service';
 export class ProdutoService {
 
 	constructor(
-    private _http: HttpService
+    private http: HttpService
   ) { }
 
 	getProdutos() {
-    var api = '/produto';
-    var url = environment.api + api;
-    
-    return this._http.get(url);
+    var url = environment.api + '/produto';    
+    return this.http.get(url);
 	}
 
 	getProdutosMock(): Produto[] {
 		return PRODUTOS;
-	}
+  }
+  
+  postProduto(params: any) {
+    var url = environment.api + '/produto';
+    return this.http.post(url, params);
+  }
 }

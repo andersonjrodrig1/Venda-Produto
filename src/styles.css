@@ -8,3 +8,7 @@
   width: 1110px;
   position: absolute;
 }
+
+.position-button {
+  text-align: right;
+}

@@ -5,7 +5,6 @@ import { Produto } from '../resources/models/produto.model';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-produto',
   templateUrl: 'produto.component.html'
 })
@@ -13,8 +12,8 @@ export class ProdutoComponent implements OnInit {
   public produtos: Produto[] = [];
 
   constructor(
-    private _service: ProdutoService,
-    private _dialogService: DialogService
+    private service: ProdutoService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit(): void {
@@ -22,19 +21,18 @@ export class ProdutoComponent implements OnInit {
   }
 
   getProdutos() {
-    this._service.getProdutos().subscribe(
+    this.service.getProdutos().subscribe(
       data => this.produtos = data.json()
     );
   }
 
   showDialogProduto() {
     const params = {
-      title: 'Cadastrar Produto',
-      name: 'Nome do Produto'
+      title: 'Cadastrar Produto'
     };
 
-    const dialogo = this._dialogService.addDialog(DialogProdutoComponent, params).subscribe(
-      response => { }
+    const dialogo = this.dialogService.addDialog(DialogProdutoComponent, params).subscribe(
+      dialog => this.getProdutos()
     );
   }
 }
