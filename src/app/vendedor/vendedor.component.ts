@@ -20,7 +20,7 @@ export class VendedorComponent implements OnInit {
 
   getVendedores(): void {
     this._service.getVendedores().subscribe(
-      data => this.vendedores = data.json()
+      data => {}
     );
   }
 }

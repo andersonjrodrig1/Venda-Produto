@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { Produto } from './../models/produto.model';
 import { PRODUTOS } from './../mock/produto-mock';
 import { environment } from '../../../environments/environment.prod';
-import { HttpService } from '../http/http.service';
+import { HttpClientService } from '../http/httpClient.service';
 
 @Injectable()
 export class ProdutoService {
 
 	constructor(
-    private http: HttpService
+    private http: HttpClientService
   ) { }
 
-	getProdutos() {
-    var url = environment.api + '/produto';    
+	getProdutos(){
+    var url = environment.api + '/produto';
     return this.http.get(url);
 	}
 

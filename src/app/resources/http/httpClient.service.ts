@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions, Jsonp } from '@angular/http';
+import { Headers, RequestOptions, Jsonp, Http } from '@angular/http';
+import { headersToString } from 'selenium-webdriver/http';
 
 @Injectable()
-export class HttpService {
+export class HttpClientService {
 	constructor(
 		private http: Http
 	){ }
@@ -23,11 +24,12 @@ export class HttpService {
 
 	post(url: string, body: any) {
 		var header = this.getHeader();
-		var headers = new RequestOptions({ headers: header });
+		var headers = new RequestOptions({ 
+				headers: header
+			});
 		return this.http.post(
-			url,
-			body,
-			headers
-		);
+      url,
+      body,
+      headers);
 	}
 }

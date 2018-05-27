@@ -15,7 +15,7 @@ import { ProdutoService } from '../../service/produto.service';
 })
 export class DialogProdutoComponent extends DialogComponent<DialogInterfaceComponent, boolean> implements DialogInterfaceComponent, OnInit {
   public frmProdutoModal: FormGroup;
-  public produto: Produto = new Produto();
+  public produto: Produto = new Produto({});
   public nome_produto: string;
   public valor_produto: string;
   public fieldObj: any;

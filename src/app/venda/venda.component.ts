@@ -34,13 +34,13 @@ export class VendaComponent implements OnInit {
 
   getVendedores(): void {
     this._vendedorService.getVendedores().subscribe(
-      data => this.vendedores = data.json()
+      data => {}
     );
   }
 
   getProdutos(): void {
     this._produtoService.getProdutos().subscribe(
-      data => this.produtos = data.json()
+      data => {}
     );
   }
 
@@ -64,7 +64,7 @@ export class VendaComponent implements OnInit {
 
   resevarVenda(): void {
     this.venda = new VendaRealizada();
-    this.venda.produto = new Produto();
+    this.venda.produto = new Produto({});
     this.venda.vendedor = new Vendedor();
     this.venda.qtdProduto = this.quantidade;
     this.venda.dtVenda = this.dataVenda;    

@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuModule } from '../resources/menu/menu.module';
 import { RouterModule } from '@angular/router';
 import { VendaService } from '../resources/service/venda.service';
-import { HttpService } from '../resources/http/http.service';
+import { HttpClientService } from '../resources/http/httpClient.service';
 
 @NgModule({
     declarations: [
@@ -22,7 +22,7 @@ import { HttpService } from '../resources/http/http.service';
     exports: [],
     providers: [
         VendaService,
-        HttpService
+        HttpClientService
     ]
 })
 export class VendaRealizadaModule { }

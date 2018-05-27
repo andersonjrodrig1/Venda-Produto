@@ -3,6 +3,7 @@ import { DialogService } from 'ng2-bootstrap-modal';
 import { ProdutoService } from '../resources/service/produto.service';
 import { Produto } from '../resources/models/produto.model';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-produto',
@@ -22,17 +23,15 @@ export class ProdutoComponent implements OnInit {
 
   getProdutos() {
     this.service.getProdutos().subscribe(
-      data => this.produtos = data.json()
-    );
+      data => {
+        let elements = data;
+        this.produtos = elements.json();
+      });
   }
 
   showDialogProduto() {
-    const params = {
-      title: 'Cadastrar Produto'
-    };
-
-    const dialogo = this.dialogService.addDialog(DialogProdutoComponent, params).subscribe(
-      dialog => this.getProdutos()
-    );
+    const params = { title: 'Cadastrar Produto' };
+    const dialog = this.dialogService.addDialog(DialogProdutoComponent, params);
+    dialog.subscribe(resp => this.getProdutos());
   }
 }

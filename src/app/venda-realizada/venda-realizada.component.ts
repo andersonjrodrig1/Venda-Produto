@@ -21,7 +21,7 @@ export class VendaRealizadaComponent implements OnInit {
   getVendasRealizadas() {
     this._vendaRealizadaService.getVendasRealizadas()
       .subscribe(data => {
-        this.vendas = data.json();
+        data => {}
       });
   }
 }
