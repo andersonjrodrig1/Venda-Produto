@@ -22,9 +22,9 @@ export class VendaComponent implements OnInit {
   public dataVenda: any;
 
   constructor(
-    private _vendedorService: VendedorService,
-    private _produtoService: ProdutoService,
-    private _vendaService: VendaService
+    private vendedorService: VendedorService,
+    private produtoService: ProdutoService,
+    private vendaService: VendaService
   ) { }
 
   ngOnInit(): void {
@@ -33,13 +33,13 @@ export class VendaComponent implements OnInit {
   }
 
   getVendedores(): void {
-    this._vendedorService.getVendedores().subscribe(
+    this.vendedorService.getVendedores().subscribe(
       data => {}
     );
   }
 
   getProdutos(): void {
-    this._produtoService.getProdutos().subscribe(
+    this.produtoService.getProdutos().subscribe(
       data => {}
     );
   }
@@ -47,7 +47,7 @@ export class VendaComponent implements OnInit {
   efetivarVenda(obj: any): void {
     debugger
     if (obj) {
-      this._vendaService.setVenda(obj).subscribe(
+      this.vendaService.setVenda(obj).subscribe(
         data => {
           this.getProdutos();
           this.removerReserva(obj);
@@ -87,10 +87,10 @@ export class VendaComponent implements OnInit {
     this.quantidade = undefined;
   }
 
-  private keyup($event): void {
+  private keyup(e): void {
     var regex = /[^0-9.]/;
     regex.lastIndex = 0;
-    var campo = $event;
+    var campo = e;
 
     if (regex.test(campo.value)) {
       campo.value = campo.value.substring(0, campo.value.length -1);

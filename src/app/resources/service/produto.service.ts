@@ -24,4 +24,9 @@ export class ProdutoService {
     var url = environment.api + '/produto';
     return this.http.post(url, params);
   }
+
+  deleteProduto(id: any) {
+    var url = environment.api + '/produto/' + id;
+    return this.http.delete(url);
+  }
 }

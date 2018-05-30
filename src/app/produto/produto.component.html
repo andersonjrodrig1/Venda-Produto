@@ -31,7 +31,7 @@
             <td>{{ produto.vrProduto | currency:'BRL':true }}</td>
             <td>
               <input class="btn btn-primary" type="button" value="Atualizar" /> 
-              <input class="btn btn-danger" type="button" value="Excluir" /> 
+              <input class="btn btn-danger" type="button" (click)="deleteProduto(produto.cdProduto)" value="Excluir" /> 
             </td>
           </tr>
         </tbody>

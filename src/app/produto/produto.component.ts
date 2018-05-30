@@ -29,6 +29,13 @@ export class ProdutoComponent implements OnInit {
       });
   }
 
+  deleteProduto(id: any) {
+    debugger
+    this.service.deleteProduto(id).subscribe(
+      data => { this.getProdutos() }
+    );
+  }
+
   showDialogProduto() {
     const params = { title: 'Cadastrar Produto' };
     const dialog = this.dialogService.addDialog(DialogProdutoComponent, params);
