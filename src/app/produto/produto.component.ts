@@ -22,17 +22,15 @@ export class ProdutoComponent implements OnInit {
   }
 
   getProdutos() {
-    this.service.getProdutos().subscribe(
-      data => {
+    this.service.getProdutos().subscribe(data => {
         let elements = data;
         this.produtos = elements.json();
       });
   }
 
   deleteProduto(id: any) {
-    debugger
-    this.service.deleteProduto(id).subscribe(
-      data => { this.getProdutos() }
+    this.service.deleteProduto(id).subscribe(data => 
+      this.getProdutos()
     );
   }
 

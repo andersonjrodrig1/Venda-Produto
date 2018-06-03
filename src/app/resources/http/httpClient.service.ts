@@ -4,17 +4,26 @@ import { headersToString } from 'selenium-webdriver/http';
 
 @Injectable()
 export class HttpClientService {
+
+  private source = '=?UTF-8?B?RDpcRGVzZW52b2x2aW1lbnRvXFZpc3VhbCBTdHVkaW9cVGVzdGVQcmF0aWNvXFRlc3RlUHJhdGljb1xhcGlccHJvZHV0bw==?=';
   
   constructor(
     private http: Http
   ){ }
 
-  getHeader(): Headers {
+  getHeader() {
     var header = new Headers();
     header.append('Content-Type', 'application/json');
+
+    return header;
+  }
+
+  getHeaderPost() {
+    var header = new Headers();
+    header.append('Content-Type', 'application/json; charset=utf-8');
     header.append('Cache-Control','no-cache');
-    header.append('Pragma', 'no-cache');
     header.append('Access-Control-Allow-Origin', '*');
+    header.append('X-SourceFiles', this.source);
 
     return header;
   }
@@ -27,7 +36,7 @@ export class HttpClientService {
   }
 
   post(url: string, body: any) {
-    var headers = new RequestOptions({ headers: this.getHeader() });
+    var headers = new RequestOptions({ headers: this.getHeaderPost() });
     return this.http.post(
       url,
       body,

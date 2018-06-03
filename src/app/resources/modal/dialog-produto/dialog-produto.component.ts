@@ -50,6 +50,7 @@ export class DialogProdutoComponent extends DialogComponent<DialogInterfaceCompo
   }
 
   cadastrar() {
+    debugger
     let produto = JSON.stringify(this.produto);
     this.service.postProduto(produto);
     this.close();
