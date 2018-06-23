@@ -9,7 +9,7 @@ import { VendedorModule } from './vendedor/vendedor.module';
 import { VendaModule } from './venda/venda.module';
 import { VendaRealizadaModule } from './venda-realizada/venda-realizada.module';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
     VendaModule,
     VendaRealizadaModule,
     RouterModule,
-    BootstrapModalModule.forRoot({container:document.body})
+    BootstrapModalModule.forRoot({ container:document.body }),
+    TranslateModule.forRoot()
   ],
   providers: [],
   bootstrap: [

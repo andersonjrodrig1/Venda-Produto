@@ -9,6 +9,7 @@ import { ProdutoService } from '../resources/service/produto.service';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     DialogProdutoComponent
   ],
   providers: [
-    ProdutoService
+    ProdutoService,
+    TranslateService
   ]
 })
 export class ProdutoModule { }
