@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Headers, RequestOptions, Jsonp, Http } from '@angular/http';
-import { headersToString } from 'selenium-webdriver/http';
+import { Http, Headers } from '@angular/http';
 
 @Injectable()
 export class HttpClientService {
 
-  private source = '=?UTF-8?B?RDpcRGVzZW52b2x2aW1lbnRvXFZpc3VhbCBTdHVkaW9cVGVzdGVQcmF0aWNvXFRlc3RlUHJhdGljb1xhcGlccHJvZHV0bw==?=';
-  
   constructor(
     private http: Http
   ){ }
@@ -14,16 +11,6 @@ export class HttpClientService {
   getHeader() {
     var header = new Headers();
     header.append('Content-Type', 'application/json');
-
-    return header;
-  }
-
-  getHeaderPost() {
-    var header = new Headers();
-    header.append('Content-Type', 'application/json; charset=utf-8');
-    header.append('Cache-Control','no-cache');
-    header.append('Access-Control-Allow-Origin', '*');
-    header.append('X-SourceFiles', this.source);
 
     return header;
   }
@@ -36,7 +23,7 @@ export class HttpClientService {
   }
 
   post(url: string, body: any) {
-    var headers = new RequestOptions({ headers: this.getHeaderPost() });
+    var headers = { headers: this.getHeader() };
     return this.http.post(
       url,
       body,
@@ -52,9 +39,9 @@ export class HttpClientService {
   }
 
   delete(url: string) {
-    var headers = new RequestOptions({ headers: this.getHeader() });
+    var headers = { headers: this.getHeader() };
     return this.http.delete(
-      url, 
+      url,
       headers);
   }
 }

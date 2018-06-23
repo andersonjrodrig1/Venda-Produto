@@ -1,9 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DialogInterfaceComponent } from './../dialog-interface/dialog-interface.component';
 import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 import { Produto } from '../../models/produto.model';
-import { FormBuilder, FormControl, FormGroup, NgForm, FormsModule } from '@angular/forms';
-import { environment } from '../../../../environments/environment';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProdutoService } from '../../service/produto.service';
 
 @Component({
@@ -49,11 +48,18 @@ export class DialogProdutoComponent extends DialogComponent<DialogInterfaceCompo
     });
   }
 
-  cadastrar() {
-    debugger
-    let produto = JSON.stringify(this.produto);
-    this.service.postProduto(produto);
-    this.close();
+  cadastrarProduto() {
+    const produto = { 
+      nmProduto: this.produto.nmProduto, 
+      vrProduto: this.produto.vrProduto 
+    };
+    
+    this.service.postProduto(produto).subscribe(data => {
+      this.close();
+    },
+    err => {
+      this.close();
+    });
   }
 
   limparCampos() {

@@ -11,8 +11,11 @@ export class ProdutoService {
     private http: HttpClientService
   ) { }
 
-	getProdutos(){
+	getProdutos(param?: any){
     var url = environment.api + '/produto';
+    if (param) {
+      url += '/' + param;
+    }
     return this.http.get(url);
 	}
 

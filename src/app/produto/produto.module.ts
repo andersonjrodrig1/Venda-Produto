@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ProdutoService } from '../resources/service/produto.service';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule }   from '@angular/forms';
     CommonModule,
     MenuModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [],
   entryComponents: [

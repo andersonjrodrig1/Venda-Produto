@@ -18,9 +18,11 @@
         <a class="nav-link" [routerLink]="['/venda']">Vender</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-      <button class="btn btn-success" type="submit">Buscar</button>
+    <form #frmMenu="ngForm" novalidate>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="busca" [(ngModel)]="busca" type="search" placeholder="Buscar">
+        <button class="btn btn-success" type="button" (click)="emitirEvento()">Buscar</button>
+      </div>
     </form>
   </div>
 </nav>
