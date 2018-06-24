@@ -3,7 +3,7 @@ import { DialogService } from 'ng2-bootstrap-modal';
 import { ProdutoService } from '../resources/service/produto.service';
 import { Produto } from '../resources/models/produto.model';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
-import { TranslateService } from '@ngx-translate/core'
+import { TranslateService } from 'ng2-translate'
 
 @Component({
   selector: 'app-produto',
@@ -15,7 +15,7 @@ export class ProdutoComponent implements OnInit {
 
   constructor(
     private service: ProdutoService,
-    private translate: TranslateService,
+    public translate: TranslateService,
     private dialogService: DialogService
   ) { }
 

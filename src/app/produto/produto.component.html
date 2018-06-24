@@ -4,13 +4,13 @@
   <br class="clearfix" />
   <div class="row">
     <div>
-      <h3>Lista de Produtos</h3>
+      <h3>{{ 'product.title' | translate }}</h3>
     </div>
   </div>
   <br class="clearfix" />
   <div class="row">
     <div class="col-12">
-      <input type="button" class="btn btn-primary" value="Novo Produto" (click)="showDialogProduto()" />
+      <input type="button" class="btn btn-primary" value="{{ 'product.new' | translate }}" (click)="showDialogProduto()" />
     </div>
   </div>
   <br class="clearfix" />
@@ -19,10 +19,10 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Código</th>
-            <th>Nome Produto</th>
-            <th>Valor Produto</th>
-            <th>Ações</th>
+            <th>{{ 'product.key' | translate }}</th>
+            <th>{{ 'product.name' | translate }}</th>
+            <th>{{ 'product.value' | translate }}</th>
+            <th>{{ 'product.actions' | translate }}</th>
           </tr>
         </thead>
         <tbody>
@@ -31,8 +31,8 @@
             <td>{{ produto.nmProduto }}</td>
             <td>{{ produto.vrProduto | currency:'BRL':true }}</td>
             <td>
-              <input class="btn btn-primary" type="button" value="Atualizar" /> 
-              <input class="btn btn-danger" type="button" (click)="deleteProduto(produto.cdProduto)" value="Excluir" /> 
+              <input class="btn btn-primary" type="button" value="{{ 'product.update' | translate }}" /> 
+              <input class="btn btn-danger" type="button" (click)="deleteProduto(produto.cdProduto)" value="{{ 'product.exclude' | translate }}" /> 
             </td>
           </tr>
         </tbody>
@@ -40,6 +40,6 @@
     </div>
   </div>
   <div *ngIf="produtos.length == 0">
-      <span class="message-center">Nenhuma produto encontrado</span>
+      <span class="message-center">{{ 'product.none' | translate }}</span>
     </div>
 </div>

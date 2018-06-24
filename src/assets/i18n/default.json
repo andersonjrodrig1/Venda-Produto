@@ -1,5 +1,20 @@
 {
   "product": {
-    "title": "Lista de Produtos"
+    "title": "Lista de Produtos",
+    "new": "Novo Produto",
+    "key": "Código",
+    "name": "Nome Produto",
+    "value": "Valor Produto",
+    "actions": "Ações",
+    "update": "Atualizar",
+    "exclude": "Excluir",
+    "none": "Nenhum produto encontrado"
+  },
+  "modal_product": {
+    "title":"Cadastrar Produto",
+    "name": "Nome Produto",
+    "value": "Valor Produto",
+    "cancel": "Cancelar",
+    "insert": "Cadastrar"
   }
 }

@@ -4,6 +4,7 @@ import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 import { Produto } from '../../models/produto.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProdutoService } from '../../service/produto.service';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
   moduleId: module.id,
@@ -23,9 +24,9 @@ export class DialogProdutoComponent extends DialogComponent<DialogInterfaceCompo
 
   constructor(
     dialogService: DialogService,
+    private translate: TranslateService,
     private formBuilder: FormBuilder,
-    private service: ProdutoService,
-  ){
+    private service: ProdutoService){
     super(dialogService);
   }
 

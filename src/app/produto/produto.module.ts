@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ProdutoComponent } from './produto.component';
-import { MenuComponent } from '../resources/menu/menu.compoent';
 import { MenuModule } from '../resources/menu/menu.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ProdutoService } from '../resources/service/produto.service';
 import { DialogProdutoComponent } from './../resources/modal/dialog-produto/dialog-produto.component';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from 'ng2-translate';
 
 @NgModule({
   declarations: [
@@ -22,15 +21,15 @@ import { TranslateService } from '@ngx-translate/core';
     MenuModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule
   ],
   exports: [],
   entryComponents: [
     DialogProdutoComponent
   ],
   providers: [
-    ProdutoService,
-    TranslateService
+    ProdutoService
   ]
 })
 export class ProdutoModule { }

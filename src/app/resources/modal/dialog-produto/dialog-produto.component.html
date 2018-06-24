@@ -1,26 +1,26 @@
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
      <div class="modal-header">
-       <h4 class="modal-title">{{ title }}</h4>
+       <h4 class="modal-title">{{ 'modal_product.title' | translate }}</h4>
        <button type="button" class="close" (click)="close()" >&times;</button>
      </div>
      <div class="modal-body">
-        <form #frmProdutoModal="ngForm" novalidate>
+        <form #frmProdutoModal="ngForm" autocomplete="off" novalidate>
           <div class="row">
             <div class="col-8">
-              <span>{{ label.nmProduto }}</span>
-              <input name="nmProduto" class="form-control" type="text" ngControl="nmProduto" [(ngModel)]="produto.nmProduto" placeholder="nome produto" required>
+              <span>{{ 'modal_product.name' | translate }}</span>
+              <input name="nmProduto" class="form-control" type="text" ngControl="nmProduto" [(ngModel)]="produto.nmProduto" placeholder="{{ 'modal_product.name' | translate }}" required>
             </div>
             <div class="col-4">
-              <span>{{ label.vrProduto }}</span>
-              <input name="vrProduto" class="form-control" type="text" ngControl="vrProduto" [(ngModel)]="produto.vrProduto" placeholder="valor produto" required>
+              <span>{{ 'modal_product.value' | translate }}</span>
+              <input name="vrProduto" class="form-control" type="text" ngControl="vrProduto" [(ngModel)]="produto.vrProduto" placeholder="{{ 'modal_product.value' | translate }}" required>
             </div>
           </div>
           <br class="clearfix" />
           <div class="row">
             <div class="col-12 position-button">
-              <button type="button" class="btn btn-default" (click)="close()">Cancelar</button>
-              <button type="button" class="btn btn-success" [disabled]="frmProdutoModal.invalid" (click)="cadastrarProduto()">Cadastrar</button>
+              <button type="button" class="btn btn-default" (click)="close()">{{ 'modal_product.cancel' | translate }}</button>
+              <button type="button" class="btn btn-success" [disabled]="frmProdutoModal.invalid" (click)="cadastrarProduto()">{{ 'modal_product.insert' | translate }}</button>
             </div>
           </div>
         </form>
